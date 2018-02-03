@@ -2,6 +2,11 @@ package main
 
 import "fmt"
 
+// Bar bar
+func Bar() string {
+	return "bar"
+}
+
 func main() {
 	fmt.Println(1)
 	fmt.Println(2)
