@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+)
 
 // Bar bar
 func Bar() string {
@@ -8,9 +11,10 @@ func Bar() string {
 }
 
 func main() {
-	fmt.Println(1)
-	fmt.Println(2)
-	fmt.Println(3)
-	fmt.Println(4)
-	fmt.Println(5)
+	var s, sep string
+	for i := 1; i < len(os.Args); i++ {
+		s += sep + os.Args[i]
+		sep = " and "
+	}
+	fmt.Println(s)
 }
